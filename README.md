@@ -28,10 +28,37 @@ The protocol has gone through three major stable revisions in 2025, each adding 
 - [MCP Security Best Practices](https://modelcontextprotocol.io/specification/2025-11-25/security) - Official security guidance (added 2025-06-18, updated 2025-11-25)
 - [MCP Authorization Specification](https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization) - OAuth 2.1 framework for MCP
 - [MCP Roadmap](https://modelcontextprotocol.io/roadmap) - Security and Authorization listed as "On the Horizon" work
-- [MCP Working Groups](https://modelcontextprotocol.io/community/working-interest-groups) - Includes Security in MCP, Auth in MCP, Server Identity, Tool Filtering, and Registry groups
+- [MCP Working Groups](https://modelcontextprotocol.io/community/working-interest-groups) - See below for details
 - [MCP Changelog: 2025-03-26](https://modelcontextprotocol.io/specification/2025-03-26) - OAuth framework, Streamable HTTP, tool annotations
 - [MCP Changelog: 2025-06-18](https://modelcontextprotocol.io/specification/2025-06-18) - Protected Resource Metadata, Resource Indicators, security best practices page
 - [MCP Changelog: 2025-11-25](https://modelcontextprotocol.io/specification/2025-11-25) - OIDC discovery, incremental scope consent, Origin validation, governance
+
+### MCP Working Groups and Interest Groups
+
+There are many planned improvements in the pipeline. The security posture of MCP should continue to change for the better as these groups produce output.
+
+**Interest Groups** (research and discussion):
+
+- Security in MCP
+- Auth in MCP
+
+**Working Groups** (producing spec changes):
+
+- Server Identity
+- Tool Filtering
+- Registry
+- Inspector
+
+**Auth Working Groups** (focused on specific auth improvements):
+
+- Client Registration
+- Fine-Grained Authorization
+- Improve Developer Experience
+- Mix-Up Protection
+- Profiles
+- Tool Scopes
+
+The Auth working groups are particularly relevant. Fine-grained authorization and tool scopes would allow more precise control over what each server and tool can access. Mix-up protection addresses the OAuth multi-issuer confusion attacks documented in RFC 9207. These are active efforts, not aspirational.
 
 ### Related Standards
 
