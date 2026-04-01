@@ -154,7 +154,7 @@ The tool call interception and prompt injection attacks are clever, but the blun
 
 ## What This Means
 
-1. **You cannot trust an MCP server you don't control.** Even open-source servers can be forked and modified trivially.
+1. **Check provenance and use official sources.** Only use MCP servers from parties you trust. Audit open-source code before running it. But be aware that **server provenance is an unsolved problem** — with remote MCP servers, you can verify the HTTPS URL via DNS (so at least with self-hosted servers you can validate where a request goes), but there is currently no way to guarantee that the binary running on a remote server matches the open-source code it claims to be built from. A server operator could be running a modified build, and you'd have no way to know.
 2. **Annotations are not security boundaries.** They are hints that a malicious server will lie about.
 3. **Tool descriptions are an attack surface.** They influence model behavior and can be weaponized.
 4. **Response content is untrusted input.** Models that follow instructions from tool responses are vulnerable to cross-context exfiltration.
