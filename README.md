@@ -2,17 +2,21 @@
 
 Workshop materials, vulnerability catalog, and resource index for the MCP security talk.
 
-This is a fast-moving area. The MCP specification itself is evolving, the security guidance in the spec is being actively developed, and new tooling appears regularly. This document collects what exists today so you can evaluate it yourself.
+This is a fast-moving area. The MCP specification itself is evolving, the security guidance in the spec is being actively developed, and new tooling appears regularly. This document collects what exists today so you can evaluate it yourself. None of these materials are exhaustive. The landscape changes weekly, and new tools, vulnerabilities, and mitigations appear faster than any single resource can track.
 
 **Disclaimer:** Inclusion of any project, product, or link here is not an endorsement. This is a landscape index. Evaluate everything independently.
+
+**Browse this content online:** [sammorrowdrums.github.io/mcp-security-workshop](https://sammorrowdrums.github.io/mcp-security-workshop/)
 
 ---
 
 ## Workshop Materials
 
-- [WALKTHROUGH.md](WALKTHROUGH.md) - Practical demonstration of MCP server attack vectors, six attacks implemented in ~250 lines
-- [mcp-vulnerability-catalog.md](mcp-vulnerability-catalog.md) - Comprehensive catalog of documented MCP vulnerabilities (40+ entries across 10 categories)
-- [diagrams/mcp-security-layers.svg](diagrams/mcp-security-layers.svg) - MCP security surface diagram
+- [WALKTHROUGH.md](WALKTHROUGH.md) - Practical demonstration of MCP server attack vectors: six attacks implemented in ~250 lines against a fork of `github/github-mcp-server`, all passing tests
+- [mcp-vulnerability-catalog.md](mcp-vulnerability-catalog.md) - Catalog of documented MCP vulnerabilities (40+ entries across 10 categories including context-layer attacks, DNS rebinding, command injection, auth flaws, and supply chain)
+- [diagrams/mcp-security-layers.svg](diagrams/mcp-security-layers.svg) - MCP security surface diagram showing trust boundaries from discovery through to the LLM context window
+
+The walkthrough covers practical attack implementation. The vulnerability catalog covers the broader documented landscape. They are complementary: the walkthrough shows how easy it is to build attacks, the catalog shows the breadth of what has been found in the wild.
 
 ---
 
@@ -40,6 +44,8 @@ The protocol has gone through three major stable revisions in 2025, each adding 
 ---
 
 ## Vulnerability Research and Catalogs
+
+See also the [vulnerability catalog](mcp-vulnerability-catalog.md) in this repository for detailed entries with MCP-specific enablers and mitigation analysis.
 
 ### Vulnerability Databases
 
@@ -138,7 +144,7 @@ The npm maintainer account for [axios](https://github.com/axios/axios) was hijac
 
 ### MCP-Specific Supply Chain Risks
 
-The vulnerability catalog documents several MCP supply chain incidents:
+The [vulnerability catalog](mcp-vulnerability-catalog.md) documents several MCP supply chain incidents:
 
 - **postmark-mcp** (Sep 2025): First confirmed malicious MCP package in the wild. Published to npm, appeared benign at install, then changed tool descriptions to inject prompt injection
 - **Phantom Repos**: Wiz documented ~100 registry entries pointing to nonexistent GitHub repositories (Apr 2025)
@@ -147,6 +153,18 @@ The vulnerability catalog documents several MCP supply chain incidents:
 - **53% of 5,000+ Servers**: Study finding that over half of sampled MCP servers used hardcoded secrets in their configurations
 
 These are the same classes of problems that package ecosystems have faced for years (typosquatting, account takeover, dependency confusion, abandoned package hijacking), now appearing in agent and MCP server registries.
+
+### GitHub Security Features
+
+GitHub provides a set of security features that compose together to address supply chain risks. These are free for all public repositories:
+
+- [Dependabot](https://docs.github.com/en/code-security/dependabot) - Automated dependency updates and vulnerability alerts. Monitors dependencies for known CVEs and opens PRs to update them
+- [Secret Scanning](https://docs.github.com/en/code-security/secret-scanning) - Detects tokens, keys, and credentials committed to repositories. Supports partner patterns to auto-revoke leaked secrets. GitHub's own MCP server uses secret scanning under the hood to prevent token exfiltration, because many users store tokens in plaintext alongside their MCP server configurations
+- [Code Scanning](https://docs.github.com/en/code-security/code-scanning) - Static analysis (powered by CodeQL and third-party tools) that finds vulnerabilities in source code
+- [Security Advisories](https://docs.github.com/en/code-security/security-advisories) - Private vulnerability reporting and coordinated disclosure for maintainers
+- [GitHub Advisory Database](https://github.com/advisories) - Community-sourced vulnerability database covering npm, PyPI, Go, Rust, and more
+
+These features work together: Dependabot pulls from the Advisory Database, secret scanning catches credentials that should never be in source, code scanning finds the bugs before they ship. For MCP server authors and consumers, this is baseline hygiene.
 
 ### Relevant Supply Chain Security Tools
 
@@ -165,7 +183,7 @@ AI is increasingly used on the offensive side of security testing. This changes 
 |---|---|---|
 | **XBOW** | Autonomous offensive security platform. Executes penetration tests at machine scale with exploit-validated findings (not theoretical risk). Validated on HackerOne finding real vulnerabilities in production applications. $120M Series C | [xbow.com](https://xbow.com/) |
 
-XBOW is relevant context for this workshop because it demonstrates that AI-driven offensive testing is a practical reality, not a research concept. The same capabilities that make autonomous pentesting effective also inform the threat model for agent-connected systems: automated reconnaissance, vulnerability identification, and exploit execution are now available at scale.
+AI-driven offensive testing is now a practical reality. Autonomous reconnaissance, vulnerability identification, and exploit execution operate at a scale and speed that manual testing cannot match. The same capabilities inform the threat model for any agent-connected system.
 
 ---
 
@@ -193,4 +211,4 @@ As AI agents gain access to production data and infrastructure through MCP, the 
 
 ## Contributing
 
-If you know of relevant tools, research, or resources that should be listed here, open an issue or PR. The goal is a useful, current index of the MCP security landscape.
+If you know of relevant tools, research, or resources that should be listed here, open an issue or PR. The goal is a useful, current index of the MCP security landscape. This list is not exhaustive and will never be. Additions, corrections, and updates are welcome.
