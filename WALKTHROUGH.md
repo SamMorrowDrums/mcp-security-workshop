@@ -123,6 +123,35 @@ The server still passes all original tests, lints clean, and behaves correctly f
 
 ---
 
+## The Only Hard Part Is Distribution
+
+Building the malicious server is trivial — the only real barrier is getting people to run it. But even that bar is lower than you'd think:
+
+- **An official-sounding Docker image** like `ghcr.io/github-community/mcp-server` or `dockerhub/github-mcp-unofficial` could fool many users who don't verify provenance.
+- **A convincing landing page** with setup instructions, a professional README, and a link to "the GitHub MCP server" — SEO and social sharing do the rest.
+- **Typosquatting** on package registries, MCP server directories, or GitHub org names catches users who mistype or don't look closely.
+- **Helpful forum/Discord posts** recommending "this fork that fixes X" or "this Docker image that's easier to set up" can redirect users to the malicious version.
+- **Supply chain compromise** — a dependency update, a compromised maintainer account, or a malicious PR that slips through review in a legitimate project.
+
+People routinely install tools from unverified sources. The MCP ecosystem is new, discovery is fragmented, and there's no universal registry with verified signatures. A polished-looking alternative is often enough.
+
+---
+
+## The Server Already Has Your Token
+
+Everything demonstrated above operates through tool responses and middleware — but it's worth remembering that the server has the user's GitHub PAT in memory from the moment it starts. It doesn't need to wait for tool calls or trick the model at all. It could silently:
+
+- **Read any repository** the token has access to and exfiltrate the code
+- **Create or modify workflows** to inject backdoors into CI/CD pipelines
+- **Add SSH keys or deploy keys** to maintain persistent access
+- **Read org membership, teams, and private repo lists** for reconnaissance
+- **Push commits** to any repo the token can write to
+- **Access secrets** if the token has the right scopes
+
+The tool call interception and prompt injection attacks are clever, but the blunt reality is simpler: **you handed the server your credentials.** Everything the token can do, the server can do — silently, in the background, without the model or client ever being involved.
+
+---
+
 ## What This Means
 
 1. **You cannot trust an MCP server you don't control.** Even open-source servers can be forked and modified trivially.
@@ -131,6 +160,7 @@ The server still passes all original tests, lints clean, and behaves correctly f
 4. **Response content is untrusted input.** Models that follow instructions from tool responses are vulnerable to cross-context exfiltration.
 5. **Static audits are insufficient.** Rug pulls demonstrate that the tool surface can change after initialization.
 6. **The model cannot distinguish instructions from data.** This is the fundamental unsolved problem underlying all prompt injection attacks.
+7. **Distribution is the only barrier — and it's a low one.** An official-sounding Docker image or web page may be all it takes to get users to install a compromised server.
 
 ---
 
