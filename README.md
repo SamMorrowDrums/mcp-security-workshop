@@ -1,6 +1,6 @@
 # Securing MCP: Threats, Trust and What You Can Actually Do About It
 
-Workshop materials, vulnerability catalog, and resource index for the MCP security talk.
+Workshop materials, vulnerability catalog, and resource index for the MCP security talk at [MCP Dev Summit North America](https://mcpdevsummitna26.sched.com/) (April 1-3, 2026, New York).
 
 This is a fast-moving area. The MCP specification itself is evolving, the security guidance in the spec is being actively developed, and new tooling appears regularly. This document collects what exists today so you can evaluate it yourself. None of these materials are exhaustive. The landscape changes weekly, and new tools, vulnerabilities, and mitigations appear faster than any single resource can track.
 
@@ -17,6 +17,67 @@ This is a fast-moving area. The MCP specification itself is evolving, the securi
 - [diagrams/mcp-security-layers.svg](diagrams/mcp-security-layers.svg) - MCP security surface diagram showing trust boundaries from discovery through to the LLM context window
 
 The walkthrough covers practical attack implementation. The vulnerability catalog covers the broader documented landscape. They are complementary: the walkthrough shows how easy it is to build attacks, the catalog shows the breadth of what has been found in the wild.
+
+---
+
+## MCP Dev Summit North America: Security Track
+
+This workshop is part of [MCP Dev Summit NA 2026](https://mcpdevsummitna26.sched.com/) (April 1-3, New York). The conference has a dedicated Security and Operations track running across all three days. Several of the projects, companies, and researchers referenced in this resource index are presenting at the summit.
+
+Notable: Obot AI is both a conference sponsor and presenter, with a keynote, a workshop on enterprise auth and governance, and talks on supply chain attacks and workflow engines.
+
+### Security and Operations Track Talks
+
+**April 1 (Workshops)**
+
+| Time | Talk | Speaker |
+|---|---|---|
+| 1:00-4:00pm | Enabling MCP at Enterprise Scale: Navigating Authentication and Governance Challenges | Bill Maxwell and Shannon Williams, Obot AI |
+| 1:00-4:00pm | Securing MCP: Threats, Trust and What You Can Actually Do About It | Sam Morrow, GitHub |
+
+**April 2 (Thursday)**
+
+| Time | Talk | Speaker |
+|---|---|---|
+| 11:50am | Securing MCP at Scale: From Principles To Production | Peter Smulovics, Morgan Stanley |
+| 12:20pm | When MCP Becomes a Product | Gautam Baghel, HashiCorp and Roy Derks, IBM |
+| 12:50pm | Golem To Murderbot: Challenges With Agentic Security Delegation Via MCP | Michael Schwartz, Gluu |
+| 12:50pm | Who's Driving? Delegation and the Confused Deputy Problem for AI Agents | Vitor Balocco and Alvaro Inckot, Runlayer |
+| 2:35pm | From Scopes To Intent: Reimagining Authorization for Autonomous Agents | Andres Aguiar and Abhishek Hingnikar, Okta |
+| 3:05pm | Deploying MCP at Scale Without Skipping Compliance | Becky Brooks, MCP Manager by Usercentrics |
+| 3:35pm | Shadow MCP: Finding the MCPs Nobody Approved | Tal Peretz and Alexander Frazer, Runlayer |
+| 4:30pm | If You Can Secure It Here, You Can Secure It Anywhere | Milan Williams and Katrina Liu, Semgrep |
+| 5:00pm | Towards Building Safe and Secure Agentic AI | Dawn Song, UC Berkeley and Matt White, Linux Foundation |
+| 5:30pm | MCP Traffic Handling at Scale: Stateless Design, Proxies, and the Road Ahead | Erica Hughberg, Tetrate and Boteng Yao, Google |
+
+**April 3 (Friday)**
+
+| Time | Talk | Speaker |
+|---|---|---|
+| 11:30am | Demistifying Client ID Metadata Documents in MCP | Den Delimarsky, Anthropic |
+| 12:00pm | Threat Modeling Authorization in MCP | Sarah Cecchetti, OpenID Foundation |
+| 12:30pm | Mix-Up Attacks in MCP: Multi-Issuer Confusion and Mitigations | Emily Lauber, Microsoft |
+| 2:25pm | Putting the Single Back in Single Sign-On: Cross-App Access for MCP | Paul Carleton, Anthropic and Max Gerber, Twilio |
+| 2:55pm | The Boring Attack That Will Actually Get You | Craig Jellick, Obot AI |
+| 3:25pm | Beyond the Sandbox: Security at the Host Layer | Lorenzo Verna and Pietro Valfre, Denied |
+| 3:25pm | MCPwned: Hacking MCP Servers With One Skeleton Key Vulnerability | Jonathan Leitschuh, Independent |
+| 4:20pm | From Chaos To Clarity: How MCP Transforms Incident Response | Sebastian Villanelo and Rocio Bayon, PagerDuty |
+| 4:20pm | Securing the MCP Ecosystem: Production Patterns for Transparency and Trust | Lisa Tagliaferri and Trevor Dunlap, Chainguard |
+| 4:50pm | Enterprise-Ready MCP: Security Patterns and the "4-Legged" Identity Challenge | Paulina Xu, Agentic Fabriq |
+| 4:50pm | Kubernetes-Native Agent Discovery: A Unified Registry for MCP Servers and Skills | Carlos Santana, AWS |
+| 5:20pm | Context Middleware for MCP: From Enterprise Needs To Protocol Extension | Peder Holdgaard Pedersen, Saxo Bank |
+| 5:20pm | Hooks, Not Hacks: Modular Enforcement for MCP Agents | Fred Araujo and Ian Molloy, IBM |
+
+### Other Security-Relevant Talks (Non-Security Track)
+
+| Time | Talk | Speaker | Track |
+|---|---|---|---|
+| Apr 2 12:20pm | Evolution, Not Revolution: How MCP Is Reshaping OAuth | Aaron Parecki, Okta | Protocol |
+| Apr 2 3:35pm | OCI Images as MCP Packaging: Supply Chain Security for AI Tools | Juan Antonio Osorio, Stacklok | Best Practices |
+| Apr 2 4:30pm | Safer AI Integration Using Mock MCP Servers for Your 3rd-Party APIs | Kin Lane, Naftiko | Best Practices |
+| Apr 3 12:30pm | The Anatomy of a Meltdown: A Deep-Dive into MCP via Selective Sabotage | Joey Stout, Spacelift | Protocol |
+| Apr 3 2:55pm | The MCP Gateway Pattern: Aggregation, Composition, and Beyond | Juan Antonio Osorio, Stacklok | Best Practices |
+| Apr 3 5:20pm | MCP Elicitation: Balancing Convenience With Security | Kay James, Gravitee | Protocol |
 
 ---
 
