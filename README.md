@@ -177,7 +177,7 @@ Tools for scanning MCP server configurations, tool definitions, and agent setups
 | **Cisco AI Defense MCP Scanner** | Scans MCP servers for security threats. Python-based | [github.com/cisco-ai-defense/mcp-scanner](https://github.com/cisco-ai-defense/mcp-scanner) |
 | **Trail of Bits mcp-context-protector** | Security proxy between client and MCP servers. TOFU pinning of tool definitions, guardrail scanning, ANSI sanitization, quarantine for suspicious responses | [github.com/trailofbits/mcp-context-protector](https://github.com/trailofbits/mcp-context-protector) |
 | **MCPSafetyScanner** | Safety scanning for MCP server configurations | [vulnerablemcp.info](https://vulnerablemcp.info/) (referenced in catalog) |
-
+| **MCP Shark** | MCP inspection and analysis tool. Aggregates multiple MCP servers into one interface, provides real-time monitoring of MCP communications, interactive testing of tools/prompts/resources, local YARA-based analysis, and AI-powered security scanning via Smart Scan | [github.com/mcp-shark/mcp-shark](https://github.com/mcp-shark/mcp-shark) |
 ---
 
 ## Runtime Protection and Sandboxing
