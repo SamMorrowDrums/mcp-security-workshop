@@ -1,4 +1,4 @@
-# GitHub Universe 2026 Workshop Outline
+# Workshop Outline
 
 ## Securing MCP: Threats, Trust and What You Can Actually Do About It
 
@@ -19,7 +19,7 @@ MCP security is not one problem. It is the interaction between server provenance
 
 ## Full workshop run of show
 
-The full version below is 180 minutes, matching the format of the original workshop. The modules are intentionally separable for a shorter Universe slot.
+The full version below is 180 minutes, matching the format of the original workshop. The modules are intentionally separable for shorter conference or training slots.
 
 | Time | Module | Format | Outcome |
 |---:|---|---|---|
@@ -251,4 +251,4 @@ Ask each group:
 - Clear `~/sam/leaks/` before rehearsal and after the session.
 - Keep a recorded or screenshot fallback for every live demonstration.
 - Verify URLs, QR codes, the public catalog PDF, and the Pages rendering from a signed-out browser.
-- Confirm the final Universe slot length before locking slide count and exercise depth.
+- Confirm the final session length before locking slide count and exercise depth.
