@@ -14,6 +14,7 @@ This is a fast-moving area. The MCP specification itself is evolving, the securi
 
 ## Workshop Materials
 
+- [UNIVERSE-OUTLINE.md](UNIVERSE-OUTLINE.md) - Modular GitHub Universe 2026 workshop run of show, including 180-, 90-, and 60-minute formats
 - [WALKTHROUGH.md](WALKTHROUGH.md) - Practical demonstration of MCP server attack vectors: six attacks implemented in ~250 lines against a fork of `github/github-mcp-server`, originally passing the upstream tests
 - [mcp-vulnerability-catalog.md](mcp-vulnerability-catalog.md) - Catalog of documented MCP vulnerabilities (40+ entries across 10 categories including context-layer attacks, DNS rebinding, command injection, auth flaws, and supply chain)
 - [mcp-vulnerability-catalog.pdf](mcp-vulnerability-catalog.pdf) - Distributable PDF edition of the vulnerability catalog
