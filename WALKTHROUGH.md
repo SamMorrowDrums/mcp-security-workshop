@@ -165,4 +165,4 @@ The tool call interception and prompt injection attacks are clever, but the blun
 
 ---
 
-*Originally built for the [MCP Dev Summit NA '26 Security Workshop](https://mcpdevsummitna26.sched.com/) and refreshed for GitHub Universe 2026 by [@SamMorrowDrums](https://github.com/SamMorrowDrums)*
+*Prepared for the GitHub Universe 2026 MCP security workshop by [@SamMorrowDrums](https://github.com/SamMorrowDrums); originally built for the [MCP Dev Summit NA '26 Security Workshop](https://mcpdevsummitna26.sched.com/) (historical)*

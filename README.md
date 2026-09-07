@@ -1,6 +1,6 @@
 # Securing MCP: Threats, Trust and What You Can Actually Do About It
 
-Workshop materials, vulnerability catalog, and resource index originally presented at [MCP Dev Summit North America](https://mcpdevsummitna26.sched.com/) (April 1-3, 2026, New York), now being refreshed for GitHub Universe 2026.
+Workshop materials, vulnerability catalog, and resource index prepared for the **GitHub Universe 2026** MCP security workshop. Originally presented at [MCP Dev Summit North America](https://mcpdevsummitna26.sched.com/) (April 1-3, 2026, New York) — see the [historical Security Track Archive](#historical-mcp-dev-summit-north-america-2026-security-track-archive) below for that event's schedule.
 
 This is a fast-moving area. The MCP specification itself is evolving, the security guidance in the spec is being actively developed, and new tooling appears regularly. This document collects what exists today so you can evaluate it yourself. None of these materials are exhaustive. The landscape changes weekly, and new tools, vulnerabilities, and mitigations appear faster than any single resource can track.
 
@@ -23,9 +23,9 @@ The walkthrough covers practical attack implementation. The vulnerability catalo
 
 ---
 
-## MCP Dev Summit North America 2026: Security Track Archive
+## Historical: MCP Dev Summit North America 2026 Security Track Archive
 
-This workshop was presented at [MCP Dev Summit NA 2026](https://mcpdevsummitna26.sched.com/) (April 1-3, New York). The conference had a dedicated Security and Operations track running across all three days. The schedule is retained as a historical index of the researchers, projects, and organizations working on MCP security.
+This workshop was originally presented at [MCP Dev Summit NA 2026](https://mcpdevsummitna26.sched.com/) (April 1-3, New York). This section is preserved as historical context — it describes that earlier event, not the GitHub Universe 2026 session. The conference had a dedicated Security and Operations track running across all three days. The schedule is retained as a historical index of the researchers, projects, and organizations working on MCP security.
 
 Obot AI was both a conference sponsor and presenter, with a keynote, a workshop on enterprise auth and governance, and talks on supply chain attacks and workflow engines.
 
