@@ -1,10 +1,12 @@
 # Securing MCP: Threats, Trust and What You Can Actually Do About It
 
-Workshop materials, vulnerability catalog, and resource index for the MCP security talk at [MCP Dev Summit North America](https://mcpdevsummitna26.sched.com/) (April 1-3, 2026, New York).
+Reusable workshop materials, vulnerability catalog, and resource index for examining MCP security across conference, training, and private workshop formats.
 
 This is a fast-moving area. The MCP specification itself is evolving, the security guidance in the spec is being actively developed, and new tooling appears regularly. This document collects what exists today so you can evaluate it yourself. None of these materials are exhaustive. The landscape changes weekly, and new tools, vulnerabilities, and mitigations appear faster than any single resource can track.
 
 **Disclaimer:** Inclusion of any project, product, or link here is not an endorsement. This is a landscape index. Evaluate everything independently.
+
+**Last reviewed:** September 7, 2026.
 
 **Browse this content online:** [sammorrowdrums.github.io/mcp-security-workshop](https://sammorrowdrums.github.io/mcp-security-workshop/)
 
@@ -12,19 +14,21 @@ This is a fast-moving area. The MCP specification itself is evolving, the securi
 
 ## Workshop Materials
 
-- [WALKTHROUGH.md](WALKTHROUGH.md) - Practical demonstration of MCP server attack vectors: six attacks implemented in ~250 lines against a fork of `github/github-mcp-server`, all passing tests
+- [WORKSHOP-OUTLINE.md](WORKSHOP-OUTLINE.md) - Modular workshop run of show, including 180-, 90-, and 60-minute formats
+- [WALKTHROUGH.md](WALKTHROUGH.md) - Practical demonstration of MCP server attack vectors: six attacks implemented in ~250 lines against a fork of `github/github-mcp-server`, originally passing the upstream tests
 - [mcp-vulnerability-catalog.md](mcp-vulnerability-catalog.md) - Catalog of documented MCP vulnerabilities (40+ entries across 10 categories including context-layer attacks, DNS rebinding, command injection, auth flaws, and supply chain)
+- [mcp-vulnerability-catalog.pdf](mcp-vulnerability-catalog.pdf) - Distributable PDF edition of the vulnerability catalog
 - [diagrams/mcp-security-layers.svg](diagrams/mcp-security-layers.svg) - MCP security surface diagram showing trust boundaries from discovery through to the LLM context window
 
 The walkthrough covers practical attack implementation. The vulnerability catalog covers the broader documented landscape. They are complementary: the walkthrough shows how easy it is to build attacks, the catalog shows the breadth of what has been found in the wild.
 
 ---
 
-## MCP Dev Summit North America: Security Track
+## Historical: MCP Dev Summit North America 2026 Security Track Archive
 
-This workshop is part of [MCP Dev Summit NA 2026](https://mcpdevsummitna26.sched.com/) (April 1-3, New York). The conference has a dedicated Security and Operations track running across all three days. Several of the projects, companies, and researchers referenced in this resource index are presenting at the summit.
+This workshop was first presented at [MCP Dev Summit NA 2026](https://mcpdevsummitna26.sched.com/) (April 1-3, New York). This section is preserved as historical context. The conference had a dedicated Security and Operations track running across all three days, and the schedule remains a useful index of the researchers, projects, and organizations working on MCP security.
 
-Notable: Obot AI is both a conference sponsor and presenter, with a keynote, a workshop on enterprise auth and governance, and talks on supply chain attacks and workflow engines.
+Obot AI was both a conference sponsor and presenter, with a keynote, a workshop on enterprise auth and governance, and talks on supply chain attacks and workflow engines.
 
 ### Security and Operations Track Talks
 
@@ -83,43 +87,21 @@ Notable: Obot AI is both a conference sponsor and presenter, with a keynote, a w
 
 ## MCP Specification and Official Security Resources
 
-The protocol has gone through three major stable revisions in 2025, each adding security surface:
+The protocol has gone through four major stable revisions through mid-2026, each changing its security surface:
 
-- [Model Context Protocol Specification](https://spec.modelcontextprotocol.io/) - The current spec
-- [MCP Security Best Practices](https://modelcontextprotocol.io/specification/2025-11-25/security) - Official security guidance (added 2025-06-18, updated 2025-11-25)
-- [MCP Authorization Specification](https://modelcontextprotocol.io/specification/2025-11-25/basic/authorization) - OAuth 2.1 framework for MCP
-- [MCP Roadmap](https://modelcontextprotocol.io/roadmap) - Security and Authorization listed as "On the Horizon" work
-- [MCP Working Groups](https://modelcontextprotocol.io/community/working-interest-groups) - See below for details
+- [Model Context Protocol Specification](https://modelcontextprotocol.io/specification/2026-07-28) - Current stable specification
+- [MCP Security Best Practices](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices) - Official security guidance
+- [MCP Authorization Specification](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization) - OAuth framework for MCP
+- [MCP Roadmap](https://modelcontextprotocol.io/development/roadmap) - Current protocol priorities
+- [MCP Working and Interest Groups](https://modelcontextprotocol.io/community/working-interest-groups) - Current governance and group index
 - [MCP Changelog: 2025-03-26](https://modelcontextprotocol.io/specification/2025-03-26) - OAuth framework, Streamable HTTP, tool annotations
 - [MCP Changelog: 2025-06-18](https://modelcontextprotocol.io/specification/2025-06-18) - Protected Resource Metadata, Resource Indicators, security best practices page
 - [MCP Changelog: 2025-11-25](https://modelcontextprotocol.io/specification/2025-11-25) - OIDC discovery, incremental scope consent, Origin validation, governance
+- [MCP Changelog: 2026-07-28](https://modelcontextprotocol.io/specification/2026-07-28/changelog) - Stateless core, Multi Round-Trip Requests, routable headers, authorization hardening, and formal deprecations
 
 ### MCP Working Groups and Interest Groups
 
-There are many planned improvements in the pipeline. The security posture of MCP should continue to change for the better as these groups produce output.
-
-**Interest Groups** (research and discussion):
-
-- Security in MCP
-- Auth in MCP
-
-**Working Groups** (producing spec changes):
-
-- Server Identity
-- Tool Filtering
-- Registry
-- Inspector
-
-**Auth Working Groups** (focused on specific auth improvements):
-
-- Client Registration
-- Fine-Grained Authorization
-- Improve Developer Experience
-- Mix-Up Protection
-- Profiles
-- Tool Scopes
-
-The Auth working groups are particularly relevant. Fine-grained authorization and tool scopes would allow more precise control over what each server and tool can access. Mix-up protection addresses the OAuth multi-issuer confusion attacks documented in RFC 9207. These are active efforts, not aspirational.
+The working-group structure changes as proposals mature. Use the live [Working and Interest Groups index](https://modelcontextprotocol.io/community/working-interest-groups) and [roadmap](https://modelcontextprotocol.io/development/roadmap) rather than this repository as the authoritative roster. For example, RFC 9207 issuer validation moved from active mix-up-protection work into the stable 2026-07-28 specification.
 
 ### Related Standards
 
@@ -147,12 +129,14 @@ See also the [vulnerability catalog](mcp-vulnerability-catalog.md) in this repos
 - [Invariant Labs - GitHub MCP Vulnerability](https://invariantlabs.ai/blog/mcp-github-vulnerability) - Private repository data exfiltration via public issue prompt injection (May 2025)
 - [Trail of Bits - Line Jumping](https://blog.trailofbits.com/2025/04/21/jumping-the-line-how-mcp-servers-can-attack-you-before-you-ever-use-them/) - Attacks that happen before a tool is ever invoked (Apr 2025)
 - [Trail of Bits - ANSI Terminal Code Deception](https://blog.trailofbits.com/2025/04/29/deceiving-users-with-ansi-terminal-codes-in-mcp/) - Invisible instructions via terminal escape sequences (Apr 2025)
-- [Trail of Bits - Insecure Credential Storage](https://blog.trailofbits.com/2025/04/30/) - Plaintext credential handling across MCP environments (Apr 2025)
+- [Trail of Bits - Insecure Credential Storage](https://blog.trailofbits.com/2025/04/30/insecure-credential-storage-plagues-mcp/) - Plaintext credential handling across MCP environments (Apr 2025)
 - [CyberArk - Universal Output Poisoning](https://www.cyberark.com/resources/threat-research-blog/poison-everywhere-no-output-from-your-mcp-server-is-safe) - Prompt injection through every MCP output channel (Jul 2025)
 - [HiddenLayer - Tool Parameter Abuse](https://hiddenlayer.com/innovation-hub/exploiting-mcp-tool-parameters/) - Exfiltrating system prompts and context via parameter naming (May 2025)
 - [Lakera AI - Zero-Click RCE via Google Docs MCP](https://www.lakera.ai/blog/zero-click-remote-code-execution-exploiting-mcp-agentic-ides) - Hidden prompt injection in shared documents chains through to code execution (Sep 2025)
 - [Palo Alto Unit 42 - MCP Sampling Exploitation](https://unit42.paloaltonetworks.com/model-context-protocol-attack-vectors/) - Three attack classes exploiting bidirectional sampling (Dec 2025)
 - [Snyk Labs - Cursor + Jira Zero-Click](https://labs.snyk.io/resources/cursor-jira-mcp-vulnerability-explained/) - Credential exfiltration via malicious Jira ticket content (Aug 2025)
+- [OX Security - Stdio Configuration Injection](https://www.ox.security/reports/the-mother-of-all-ai-supply-chains-anthropics-by-design-failure-at-the-heart-of-the-ai-ecosystem/) - Attacker-influenced MCP configuration reaching local process execution (Apr 2026)
+- [Cloud Security Alliance - Agentjacking](https://labs.cloudsecurityalliance.org/research/csa-research-note-agentjacking-mcp-sentry-injection-20260612/) - Prompt injection through Sentry telemetry consumed by MCP-connected coding agents (Jun 2026)
 - [Simon Willison - MCP Prompt Injection Analysis](https://simonwillison.net/2025/Apr/9/mcp-prompt-injection/) - "Mixing tools with untrusted instructions is inherently dangerous"
 
 ### Industry Assessments
@@ -178,6 +162,7 @@ Tools for scanning MCP server configurations, tool definitions, and agent setups
 | **Trail of Bits mcp-context-protector** | Security proxy between client and MCP servers. TOFU pinning of tool definitions, guardrail scanning, ANSI sanitization, quarantine for suspicious responses | [github.com/trailofbits/mcp-context-protector](https://github.com/trailofbits/mcp-context-protector) |
 | **MCPSafetyScanner** | Safety scanning for MCP server configurations | [vulnerablemcp.info](https://vulnerablemcp.info/) (referenced in catalog) |
 | **MCP Shark** | MCP inspection and analysis tool. Aggregates multiple MCP servers into one interface, provides real-time monitoring of MCP communications, interactive testing of tools/prompts/resources, local YARA-based analysis, and AI-powered security scanning via Smart Scan | [github.com/mcp-shark/mcp-shark](https://github.com/mcp-shark/mcp-shark) |
+
 ---
 
 ## Runtime Protection and Sandboxing
@@ -224,7 +209,7 @@ Supply chain attacks against software ecosystems are not new, but the scale and 
 
 ### The axios Incident (March 31, 2026)
 
-The npm maintainer account for [axios](https://github.com/axios/axios) was hijacked. Malicious versions `1.14.1` and `0.30.4` were published with a hidden dependency (`plain-crypto-js`) that dropped a cross-platform Remote Access Trojan. The malicious versions were live for approximately three hours. Platform-specific payloads targeted macOS, Windows, and Linux. This was part of a broader campaign ("TeamPCP") that also targeted Trivy, Telnyx, and LiteLLM.
+The npm maintainer account for [axios](https://github.com/axios/axios) was hijacked. Malicious versions `1.14.1` and `0.30.4` were published with a hidden dependency (`plain-crypto-js`) that dropped a cross-platform Remote Access Trojan. The malicious versions were live for approximately three hours. Platform-specific payloads targeted macOS, Windows, and Linux. This occurred amid a wave of npm supply-chain attacks in March 2026 that included a separate campaign ("TeamPCP") targeting Trivy, Telnyx, and LiteLLM; researchers have not linked the axios compromise to that actor.
 
 - [StepSecurity - axios compromised on npm](https://www.stepsecurity.io/blog/axios-compromised-on-npm-malicious-versions-drop-remote-access-trojan)
 - [Socket.dev - axios npm package compromised](https://socket.dev/blog/axios-npm-package-compromised)
