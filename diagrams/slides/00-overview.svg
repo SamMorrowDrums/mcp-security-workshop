@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800" role="img" aria-labelledby="title description">
+<title id="title">MCP Security Surface</title>
+<desc id="description">Six areas from the original chart, simplified for projection: discovery and supply chain; transport and authorization; servers; context flow; host and client; multi-server composition. Rows are concerns, not nested software components.</desc>
+<defs>
+<marker id="arrow-purple" viewBox="0 0 12 12" markerWidth="10" markerHeight="10" refX="10" refY="6" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11Z" fill="#AE85FF"/></marker>
+<marker id="arrow-green" viewBox="0 0 12 12" markerWidth="10" markerHeight="10" refX="10" refY="6" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11Z" fill="#5FED83"/></marker>
+<marker id="arrow-orange" viewBox="0 0 12 12" markerWidth="10" markerHeight="10" refX="10" refY="6" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11Z" fill="#FFABA8"/></marker>
+</defs>
+<rect width="1600" height="800" fill="#101411"/>
+<text x="80" y="94" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="600" text-anchor="start">MCP Security Surface</text>
+<line x1="80" y1="129" x2="1520" y2="129" stroke="#B0BAC2" stroke-width="2" stroke-opacity="0.35"/>
+<text x="80" y="210" fill="#AE85FF" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="600" text-anchor="start">1</text>
+<text x="130" y="210" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="600" text-anchor="start">Discovery / supply chain</text>
+<rect x="650" y="170" width="250" height="64" rx="10" fill="#101411" stroke="#AE85FF" stroke-width="2.5"/>
+<text x="775.0" y="211.52" fill="#AE85FF" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600" text-anchor="middle">Packages</text>
+<rect x="950" y="170" width="250" height="64" rx="10" fill="#101411" stroke="#AE85FF" stroke-width="2.5"/>
+<text x="1075.0" y="211.52" fill="#AE85FF" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600" text-anchor="middle">Registries</text>
+<rect x="1250" y="170" width="250" height="64" rx="10" fill="#101411" stroke="#AE85FF" stroke-width="2.5"/>
+<text x="1375.0" y="211.52" fill="#AE85FF" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600" text-anchor="middle">Dependencies</text>
+<line x1="80" y1="249" x2="1520" y2="249" stroke="#B0BAC2" stroke-width="1" stroke-opacity="0.35"/>
+<text x="80" y="298" fill="#AE85FF" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="600" text-anchor="start">2</text>
+<text x="130" y="298" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="600" text-anchor="start">Transport &amp; auth</text>
+<rect x="650" y="258" width="405" height="64" rx="10" fill="#101411" stroke="#AE85FF" stroke-width="2.5"/>
+<text x="852.5" y="299.52" fill="#AE85FF" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600" text-anchor="middle">Local: stdio</text>
+<rect x="1085" y="258" width="405" height="64" rx="10" fill="#101411" stroke="#AE85FF" stroke-width="2.5"/>
+<text x="1287.5" y="299.52" fill="#AE85FF" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600" text-anchor="middle">Remote: HTTP</text>
+<line x1="80" y1="337" x2="1520" y2="337" stroke="#B0BAC2" stroke-width="1" stroke-opacity="0.35"/>
+<text x="80" y="386" fill="#5FED83" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="600" text-anchor="start">3</text>
+<text x="130" y="386" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="600" text-anchor="start">MCP servers</text>
+<rect x="650" y="346" width="405" height="64" rx="10" fill="#101411" stroke="#5FED83" stroke-width="2.5"/>
+<text x="852.5" y="387.52" fill="#5FED83" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600" text-anchor="middle">Local server</text>
+<rect x="1085" y="346" width="405" height="64" rx="10" fill="#101411" stroke="#5FED83" stroke-width="2.5"/>
+<text x="1287.5" y="387.52" fill="#5FED83" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600" text-anchor="middle">Remote server</text>
+<line x1="80" y1="425" x2="1520" y2="425" stroke="#B0BAC2" stroke-width="1" stroke-opacity="0.35"/>
+<text x="80" y="474" fill="#5FED83" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="600" text-anchor="start">4</text>
+<text x="130" y="474" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="600" text-anchor="start">Context flow</text>
+<rect x="650" y="434" width="250" height="64" rx="10" fill="#101411" stroke="#5FED83" stroke-width="2.5"/>
+<text x="775.0" y="475.52" fill="#5FED83" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600" text-anchor="middle">Server content</text>
+<rect x="950" y="434" width="250" height="64" rx="10" fill="#101411" stroke="#5FED83" stroke-width="2.5"/>
+<text x="1075.0" y="475.52" fill="#5FED83" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600" text-anchor="middle">Host / model</text>
+<rect x="1250" y="434" width="250" height="64" rx="10" fill="#101411" stroke="#5FED83" stroke-width="2.5"/>
+<text x="1375.0" y="475.52" fill="#5FED83" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600" text-anchor="middle">Actions</text>
+<path d="M900 466 H945" fill="none" stroke="#5FED83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow-green)"/>
+<path d="M1200 466 H1245" fill="none" stroke="#5FED83" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow-green)"/>
+<line x1="80" y1="513" x2="1520" y2="513" stroke="#B0BAC2" stroke-width="1" stroke-opacity="0.35"/>
+<text x="80" y="562" fill="#AE85FF" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="600" text-anchor="start">5</text>
+<text x="130" y="562" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="600" text-anchor="start">Host / client</text>
+<rect x="650" y="522" width="250" height="64" rx="10" fill="#101411" stroke="#AE85FF" stroke-width="2.5"/>
+<text x="775.0" y="563.52" fill="#AE85FF" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600" text-anchor="middle">MCP clients</text>
+<rect x="950" y="522" width="250" height="64" rx="10" fill="#101411" stroke="#AE85FF" stroke-width="2.5"/>
+<text x="1075.0" y="563.52" fill="#AE85FF" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600" text-anchor="middle">Context</text>
+<rect x="1250" y="522" width="250" height="64" rx="10" fill="#101411" stroke="#AE85FF" stroke-width="2.5"/>
+<text x="1375.0" y="563.52" fill="#AE85FF" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600" text-anchor="middle">Approvals</text>
+<line x1="80" y1="601" x2="1520" y2="601" stroke="#B0BAC2" stroke-width="1" stroke-opacity="0.35"/>
+<text x="80" y="650" fill="#FFABA8" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="600" text-anchor="start">6</text>
+<text x="130" y="650" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="600" text-anchor="start">Multi-server composition</text>
+<rect x="650" y="610" width="250" height="64" rx="10" fill="#101411" stroke="#FFABA8" stroke-width="2.5"/>
+<text x="775.0" y="651.52" fill="#FFABA8" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600" text-anchor="middle">Server A</text>
+<rect x="950" y="610" width="250" height="64" rx="10" fill="#101411" stroke="#FFABA8" stroke-width="2.5"/>
+<text x="1075.0" y="651.52" fill="#FFABA8" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600" text-anchor="middle">Agent</text>
+<rect x="1250" y="610" width="250" height="64" rx="10" fill="#101411" stroke="#FFABA8" stroke-width="2.5"/>
+<text x="1375.0" y="651.52" fill="#FFABA8" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600" text-anchor="middle">Server B</text>
+<path d="M900 642 H945" fill="none" stroke="#FFABA8" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow-orange)"/>
+<path d="M1200 642 H1245" fill="none" stroke="#FFABA8" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow-orange)"/>
+</svg>

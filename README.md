@@ -18,6 +18,7 @@ This is a fast-moving area. The MCP specification itself is evolving, the securi
 - [mcp-vulnerability-catalog.md](mcp-vulnerability-catalog.md) - Catalog of documented MCP vulnerabilities (40+ entries across 10 categories including context-layer attacks, DNS rebinding, command injection, auth flaws, and supply chain)
 - [mcp-vulnerability-catalog.pdf](mcp-vulnerability-catalog.pdf) - Distributable PDF edition of the vulnerability catalog
 - [diagrams/mcp-security-layers.svg](diagrams/mcp-security-layers.svg) - MCP security surface diagram showing trust boundaries from discovery through to the LLM context window
+- [Slide-sized SVGs and speaker notes](diagrams/slides/README.md) - Simplified overview and six layer diagrams in the Universe palette, sized to fit above a presentation footer
 
 The walkthrough covers practical attack implementation. The vulnerability catalog covers the broader documented landscape. They are complementary: the walkthrough shows how easy it is to build attacks, the catalog shows the breadth of what has been found in the wild.
 
