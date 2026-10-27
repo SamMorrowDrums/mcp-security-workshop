@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800" role="img" aria-labelledby="title description">
+<title id="title">Discovery &amp; supply chain</title>
+<desc id="description">A server can be selected through manual installation, a public registry, or an organization registry. Publisher code and dependencies become part of the server. Selection controls do not attest the code or remote operator.</desc>
+<defs>
+<marker id="arrow-purple" viewBox="0 0 12 12" markerWidth="10" markerHeight="10" refX="10" refY="6" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11Z" fill="#AE85FF"/></marker>
+<marker id="arrow-green" viewBox="0 0 12 12" markerWidth="10" markerHeight="10" refX="10" refY="6" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11Z" fill="#5FED83"/></marker>
+<marker id="arrow-orange" viewBox="0 0 12 12" markerWidth="10" markerHeight="10" refX="10" refY="6" orient="auto-start-reverse"><path d="M1 1 L11 6 L1 11Z" fill="#FFABA8"/></marker>
+</defs>
+<rect width="1600" height="800" fill="#101411"/>
+<text x="80" y="94" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="600" text-anchor="start">Discovery &amp; supply chain</text>
+<line x1="80" y1="129" x2="1520" y2="129" stroke="#B0BAC2" stroke-width="2" stroke-opacity="0.35"/>
+<rect x="100" y="240" width="400" height="100" rx="10" fill="#101411" stroke="#AE85FF" stroke-width="2.5"/>
+<text x="300.0" y="302.92" fill="#AE85FF" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="600" text-anchor="middle">Manual install</text>
+<line x1="300" y1="340" x2="300" y2="400" stroke="#AE85FF" stroke-width="3"/>
+<rect x="600" y="240" width="400" height="100" rx="10" fill="#101411" stroke="#AE85FF" stroke-width="2.5"/>
+<text x="800.0" y="302.92" fill="#AE85FF" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="600" text-anchor="middle">Public registry</text>
+<line x1="800" y1="340" x2="800" y2="400" stroke="#AE85FF" stroke-width="3"/>
+<rect x="1100" y="240" width="400" height="100" rx="10" fill="#101411" stroke="#AE85FF" stroke-width="2.5"/>
+<text x="1300.0" y="302.92" fill="#AE85FF" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="600" text-anchor="middle">Org registry</text>
+<line x1="1300" y1="340" x2="1300" y2="400" stroke="#AE85FF" stroke-width="3"/>
+<line x1="300" y1="400" x2="1300" y2="400" stroke="#AE85FF" stroke-width="3"/>
+<path d="M800 400 V485" fill="none" stroke="#AE85FF" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow-purple)"/>
+<rect x="600" y="490" width="400" height="110" rx="10" fill="#101411" stroke="#5FED83" stroke-width="2.5"/>
+<text x="800.0" y="558.6" fill="#5FED83" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="600" text-anchor="middle">MCP server</text>
+<rect x="1110" y="490" width="390" height="110" rx="10" fill="#101411" stroke="#AE85FF" stroke-width="2.5"/>
+<text x="1305.0" y="557.24" fill="#AE85FF" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="600" text-anchor="middle">Dependencies</text>
+<path d="M1110 545 H1007" fill="none" stroke="#AE85FF" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow-purple)"/>
+<text x="1300" y="205" fill="#B0BAC2" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="400" text-anchor="middle">Allowlists / policy</text>
+<line x1="80" y1="716" x2="296" y2="716" stroke="#5FED83" stroke-width="4"/>
+<text x="80" y="760" fill="#5FED83" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="start">1  Discovery</text>
+<line x1="320" y1="716" x2="536" y2="716" stroke="#B0BAC2" stroke-width="1" stroke-opacity="0.35"/>
+<text x="320" y="760" fill="#B0BAC2" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="400" text-anchor="start">2  Transport / auth</text>
+<line x1="560" y1="716" x2="776" y2="716" stroke="#B0BAC2" stroke-width="1" stroke-opacity="0.35"/>
+<text x="560" y="760" fill="#B0BAC2" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="400" text-anchor="start">3  Servers</text>
+<line x1="800" y1="716" x2="1016" y2="716" stroke="#B0BAC2" stroke-width="1" stroke-opacity="0.35"/>
+<text x="800" y="760" fill="#B0BAC2" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="400" text-anchor="start">4  Context flow</text>
+<line x1="1040" y1="716" x2="1256" y2="716" stroke="#B0BAC2" stroke-width="1" stroke-opacity="0.35"/>
+<text x="1040" y="760" fill="#B0BAC2" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="400" text-anchor="start">5  Host / client</text>
+<line x1="1280" y1="716" x2="1496" y2="716" stroke="#B0BAC2" stroke-width="1" stroke-opacity="0.35"/>
+<text x="1280" y="760" fill="#B0BAC2" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="400" text-anchor="start">6  Multi-server</text>
+</svg>
